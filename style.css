@@ -1,6 +1,12 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+/* General Styling */
+:root {
+  --javascript: #f0db4f;
+  --javascript-alt: #323330;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +15,66 @@
 
 body {
   font-family: "Quantico", serif;
+  color: var(--javascript-alt);
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  margin: 0 auto 32px;
+  padding-top: 8px;
+  width: 80%;
+}
+
+/* Hero Section */
+.hero {
+  color: #fff;
+  background-color: #222;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.nav-logo-js {
+  color: var(--javascript);
+  margin-inline: 4px;
+}
+
+.main-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.main-nav-link {
+  padding: 1px 2px;
+  color: #fff;
+  background-image: linear-gradient(var(--javascript) 0 0);
+  background-size: 0;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.main-nav-link:hover {
+  background-size: 100%;
+  color: var(--javascript-alt);
 }
