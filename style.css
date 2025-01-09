@@ -21,6 +21,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul,
@@ -32,15 +33,17 @@ li {
 .container {
   margin: 0 auto 32px;
   padding-top: 8px;
-  width: 80%;
+  width: 85%;
 }
 
-/* Hero Section */
-.hero {
-  color: #fff;
-  background-color: #222;
+.hero-container {
+  display: flex;
+  align-items: center;
+  padding-block: 96px;
+  width: 100%;
 }
 
+/* Main Navigation */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -65,7 +68,9 @@ li {
   gap: 32px;
 }
 
-.main-nav-link {
+.main-nav-link,
+.hero-description-link,
+.btn-main {
   padding: 1px 2px;
   color: #fff;
   background-image: linear-gradient(var(--javascript) 0 0);
@@ -74,7 +79,90 @@ li {
   transition: 0.4s;
 }
 
-.main-nav-link:hover {
+.main-nav-link:hover,
+.hero-description-link:hover,
+.btn-main:hover {
   background-size: 100%;
   color: var(--javascript-alt);
+}
+
+/* Hero Section */
+.hero {
+  color: #fff;
+  background-color: #222;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.right-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.hero-icons {
+  position: relative;
+}
+
+.hero-icon {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 6s infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.hero-icon:nth-child(2) {
+  animation-delay: 2s;
+}
+.hero-icon:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.hero-icon i {
+  font-size: 96px;
+  margin-bottom: 8px;
+}
+
+.hero-icon p {
+  border-bottom: 3px solid var(--javascript);
 }
