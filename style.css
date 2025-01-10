@@ -179,3 +179,16 @@ li {
   font-weight: bold;
   border-bottom: 4px solid var(--javascript);
 }
+
+/* Games Section */
+.games {
+  text-align: center;
+}
+
+.games-header {
+  margin-block: 24px;
+}
+
+.games-header-title {
+  font-size: 32px;
+}
