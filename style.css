@@ -148,7 +148,7 @@ li {
 
 .hero-icon {
   position: absolute;
-  top: -50px;
+  top: -75px;
   left: calc(50% - 100px);
   opacity: 0;
   animation: display 6s infinite;
