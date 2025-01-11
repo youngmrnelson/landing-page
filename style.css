@@ -44,6 +44,10 @@ li {
   width: 100%;
 }
 
+.btn {
+  display: inline-block;
+}
+
 /* Main Navigation */
 .main-nav {
   display: flex;
@@ -72,6 +76,7 @@ li {
 .main-nav-link,
 .hero-description-link,
 .btn-main,
+.btn-alt,
 .games-icon-container {
   padding: 1px 2px;
   color: #fff;
@@ -81,9 +86,14 @@ li {
   transition: 0.4s;
 }
 
+.btn-alt {
+  color: var(--javascript-alt);
+}
+
 .main-nav-link:hover,
 .hero-description-link:hover,
 .btn-main:hover,
+.btn-alt:hover,
 .games-icon-container:hover {
   background-size: 100%;
   color: var(--javascript-alt);
@@ -230,4 +240,65 @@ li {
 .games-icon-container-alt {
   border-color: var(--react);
   background-image: linear-gradient(var(--react) 0 0);
+}
+
+/* Info Section */
+.info {
+  background-color: #e5e7eb;
+  padding-block: 96px;
+}
+
+.info-text {
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.btn-alt {
+  float: right;
+  font-size: 18px;
+  border-bottom: 2px solid var(--javascript);
+}
+
+/* Call-to-Action Section */
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 96px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--javascript);
+  border-radius: 12px;
+  padding: 32px 128px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-text-bold {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.cta-text {
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-cta {
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 12px 32px;
+}
+
+.btn-cta:hover {
+  border-color: var(--javascript-alt);
 }
