@@ -302,3 +302,10 @@ li {
 .btn-cta:hover {
   border-color: var(--javascript-alt);
 }
+
+footer {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding-block: 24px;
+}
